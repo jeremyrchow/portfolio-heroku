@@ -18,8 +18,14 @@
   margin-left: 50%;
   margin-right: 50%;
   width: 10%;
+  background: rgba(255, 255, 255, 0.7) !important; 
+  /*opacity: .5;*/
 }
 
 .navbar-inner{
   padding: 10% 5% 10% 5%;
+}
+
+#navbar {
+    background: rgba(255, 255, 255, 0.7);
 }

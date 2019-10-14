@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HeaderBanner() {
   return (
-    <div className="nav-bar">
+    <div id="navbar" className="nav-bar navbar">
       <Navbar fixed= "top" bg="white" expand="lg">
         <Navbar.Brand href="#home">Jeremy Chow</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,38 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import HeaderBanner from './components/HeaderBanner'
-import Navbar from 'react-bootstrap/Navbar'
-import ProjectContainer from './components/ProjectContainer'
-function App() {
-  return (
-    <div className="App">
-      
-      <HeaderBanner />
-      
-      <div className = "profile-pic">
-        <img
-            style={{borderRadius: "50%"}} 
-            src = "https://cdn-images-1.medium.com/fit/c/200/200/2*FKLF1oKsmDoaVZfM2szdvg.jpeg"
-            alt = "JeremyChowPicture"
-         />
-      </div>
-      <div className = "intro-text">
-        <h1 style={{fontSize: 'calc(2em + 6vw'}}>{"Hi, my name is Jeremy Chow"}</h1>
-      </div>
-      
-      <div className = "project-wrapper">
-          <hr /> 
-          <h1 style={{fontSize: "calc(2em + 3vw)"}}> Projects </h1>
-          <div id="project_1" className = "project">
-            <h2> Game Recommender for Twitch Streamers </h2>
-            {"Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. \
-            Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. \
-            Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. \
-            Machine learning blog about difficult machine learning stuff. Machine learning blog about difficult machine learning stuff. "}
-               
+import React from "react"
+// import "./HeaderBanner.css"
 
-            <a href="https://github.com/">
+function ProjectContainer(props) {
+  	const {title,description, github, medium} = props 
+  	console.log(github)
+  	// Pass in project description, project links. Returns container with project blurb and links with correct
+   	// icons
+
+   	/*
+   	title = ""
+	description = ""
+	github = ""
+	medium = ""
+	presentation = ""
+	demo_link = ""
+   	*/
+  return (
+    <div>
+   	
+   	<h2> {title} </h2>
+   	<p> {description} </p>
+   	
+   		{github && (
+			<a href={github}>
                 <svg width={"50px"} viewBox="0 0 128 128" alt="Github Logo">
                     <path fillRule="evenodd"
                         clipRule="evenodd"
@@ -40,44 +30,24 @@ function App() {
                     </path>
                 </svg> 
             </a>
-            <a href="https://github.com/">
+        )}
+		{medium && (
+            <a href={medium}>
                 <img
+                    className = "tool-logo"
                     width={"50px"}
                     src="https://miro.medium.com/max/968/1*uLuWzCXfq2rt1t_TkuLB8A.png"
-                    alt = "Medium Logo" />
+                    alt = "Medium Logo" 
+                />
             </a>
-          </div>
-          <hr /> 
-          <div className = "project">
-            <h2> Project 2 </h2>
-
-            {"Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Congue quisque egestas diam in arcu cursus euismod."}
-          </div>
-          <hr />
-          <ProjectContainer 
-            title="Project 3"
-            description = {" Testing the description box"}
-            github="https://github.com/"
-            medium = "https://github.com/"
-          />
+        )}
 
 
-      </div>
-
+   	<hr />
     </div>
   );
 }
 
-export default App;
+export default ProjectContainer;
 
 
-
-// <header className="App-header">
-//   <img src={logo} className="App-logo" alt="logo" />
-//   <p>
-//     Edit <code>src/App.js</code> and save to reload.
-//   </p>
-//   <p>
-//     Jeremy Chow
-//   </p>
-// </header>
