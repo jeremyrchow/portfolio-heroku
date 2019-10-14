@@ -39,8 +39,18 @@
 .project{
   margin-top: 3%;
   margin-bottom: 3%;
+  text-align: left;
+}
+.tool-logo-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tool-logo-not-first{
+  margin-left: 1%;
 }
 
-.tool-logo{
-  margin-left: 1%;
+img {
+  max-width: 100%;
+  height: auto;
 }
