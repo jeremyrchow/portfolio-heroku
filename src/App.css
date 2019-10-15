@@ -42,9 +42,6 @@
   text-align: left;
 }
 
-hr {
-  padding: 50px,50px,50px,50px;
-}
 
 .link-logo-section{
   display: flex;
@@ -63,7 +60,7 @@ img {
 }
 
 .intro-text h1{
-  font-size: calc(2em + 3vw);
+  font-size: calc(2em + 2vw);
 }
 .intro-text p{
   font-size: 1.2em;
@@ -76,4 +73,7 @@ img {
 footer{
   color: gray;
 }
+
+
+
 

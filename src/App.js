@@ -118,7 +118,7 @@ function App() {
     <ContactForm />
 
     <footer> Built by Jeremy Chow </footer>
-    
+
     </div>
     );
 }
