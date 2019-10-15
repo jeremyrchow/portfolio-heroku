@@ -54,6 +54,34 @@
   display: inline-block;
   margin: 3% 1%;
 }
+ul {
+  vertical-align: text top;
+  align-self: top;
+  align-content: top;
+  align-items: top;
+}
+.listColumn {
+  float:left;
+  text-align: left;
+  width: 33%;
+  padding: 10px;
+  vertical-align: top
+  
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 800px) {
+  .listColumn{
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+  }
+}
+
+
 img {
   max-width: 100%;
   height: auto;

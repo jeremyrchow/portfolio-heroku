@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css';
 import HeaderBanner from './components/HeaderBanner'
-import Navbar from 'react-bootstrap/Navbar'
 import ProjectContainer from './components/ProjectContainer'
 import ProfilePic from './assets/Jeremy_Chow_White_Background.jpg'
 import ContactForm from './components/ContactForm'
 import SocialMediaLinks from './components/SocialMediaLinks'
+
 function App() {
-  // style={{fontSize: 'calc(2em + 3vw'}}
+
     return (
         <div className="App">
-
         <HeaderBanner />
-
         <div className = "profile-pic">
             <img
             style={{borderRadius: "50%", height: "35vw", transition: "opacity 0.5s", opacity: 1}} 
@@ -20,6 +18,7 @@ function App() {
             alt = "JeremyChowPicture"
             />
         </div>
+
         <div className = "intro-text">
             <h1> {"Hi, my name is "} </h1>
             <h1> {"Jeremy Chow"} </h1>
@@ -27,9 +26,9 @@ function App() {
             <p> I'm a Data Scientist passionate about using machine learning models to impact business
              decisions and gather meaningful insights.</p>
             <p> I am comfortable in the following technologies: </p>
-            <div style={{display: "flex",textAlign: "left"}}>
+            <div className = "row">
 
-                <ul style = {{margin: "auto"}}> 
+                <ul className="listColumn"> 
                 <h4> <strong>Languages</strong> </h4>
                     <li> Python </li>
                     <li> SQL </li>
@@ -37,14 +36,14 @@ function App() {
                     <li> C++, C </li>
                     <li> Java </li>
                 </ul>
-                <ul style = {{margin: "auto"}}> 
+                <ul className="listColumn"> 
                 <h4> <strong>Frameworks </strong></h4>
                     <li> Pandas </li>
                     <li> TensorFlow </li>
                     <li> Keras </li>
                     <li> Flask </li>
                 </ul>
-                <ul style = {{margin: "auto"}}> 
+                <ul className="listColumn"> 
                 <h4> <strong> Other </strong></h4>
                     <li> Tableau</li>
                     <li> AWS EC2, RDS </li>
@@ -125,14 +124,3 @@ function App() {
 
 export default App;
 
-
-
-// <header className="App-header">
-//   <img src={logo} className="App-logo" alt="logo" />
-//   <p>
-//     Edit <code>src/App.js</code> and save to reload.
-//   </p>
-//   <p>
-//     Jeremy Chow
-//   </p>
-// </header>
