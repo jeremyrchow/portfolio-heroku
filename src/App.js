@@ -4,7 +4,9 @@ import HeaderBanner from './components/HeaderBanner'
 import Navbar from 'react-bootstrap/Navbar'
 import ProjectContainer from './components/ProjectContainer'
 import ProfilePic from './assets/Jeremy_Chow_White_Background.jpg'
+import ContactForm from './components/ContactForm'
 function App() {
+    // style={{fontSize: 'calc(2em + 3vw'}}
   return (
     <div className="App">
       
@@ -18,14 +20,14 @@ function App() {
          />
       </div>
       <div className = "intro-text">
-        <h1 style={{fontSize: 'calc(2em + 3vw'}}> {"Hi, my name is "} </h1>
-        <h1 style={{fontSize: 'calc(2em + 3vw'}}> {"Jeremy Chow"} </h1>
+        <h1> {"Hi, my name is "} </h1>
+        <h1> {"Jeremy Chow"} </h1>
         
       </div>
       
       <div className = "project-wrapper">
           <hr /> 
-          <h1 style={{fontSize: "calc(2em + 2vw)"}}> Projects </h1>
+          <h1 style={{fontSize: "calc(2em + 2vw)", textAlign: "left"}}> Data Science Projects </h1>
 
           <ProjectContainer 
             title="Game Recommender for Twitch Streamers"
@@ -43,12 +45,14 @@ function App() {
             
             description = {"Built a chatbot that predicted the probability that an online comment is toxic. Deployed model \
             on website and through Twitch chatbot programmed in JavaScript to classify live chat in real time. Model used \
-            TF-IDF vectorization and logistic regression to processa and classify comments on a 0-1 scale for six \
+            TF-IDF vectorization and logistic regression to process and classify comments on a 0-1 scale for six \
             different categories that were present in the labeled training set."}
 
             github="https://github.com/jeremyrchow/harassment-classifier"
             
             medium = "https://towardsdatascience.com/quantifying-chatroom-toxicity-e755dd2f9ccf"
+
+            link = "https://chat-toxicity-classifier.herokuapp.com/"
           />
 
           <ProjectContainer 
@@ -63,6 +67,8 @@ function App() {
 
 
       </div>
+
+      <ContactForm />
 
     </div>
   );

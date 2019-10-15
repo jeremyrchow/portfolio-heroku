@@ -41,16 +41,32 @@
   margin-bottom: 3%;
   text-align: left;
 }
-.tool-logo-section{
+
+hr {
+  padding: 50px,50px,50px,50px;
+}
+
+.link-logo-section{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.tool-logo-not-first{
-  margin-left: 1%;
+  /*background: linear-gradient(#000, #000) no-repeat center/2px 100%;*/
 }
 
+.link-logo{
+  display: inline-block;
+  margin: 3% 1%;
+}
 img {
   max-width: 100%;
   height: auto;
 }
+
+.intro-text h1{
+  font-size: calc(2em + 3vw);
+}
+
+#contact-form {
+  text-align: left
+}
+
