@@ -29,3 +29,7 @@
 #navbar {
     background: rgba(255, 255, 255, 0.7);
 }
+
+.navbar .navbar-fixed-top .navbar-inner{
+    background: rgba(255, 255, 255, 0.7) !important;
+}

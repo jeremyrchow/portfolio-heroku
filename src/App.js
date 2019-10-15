@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import ProjectContainer from './components/ProjectContainer'
 import ProfilePic from './assets/Jeremy_Chow_White_Background.jpg'
 import ContactForm from './components/ContactForm'
+import SocialMediaLinks from './components/SocialMediaLinks'
 function App() {
   // style={{fontSize: 'calc(2em + 3vw'}}
     return (
@@ -22,11 +23,37 @@ function App() {
         <div className = "intro-text">
             <h1> {"Hi, my name is "} </h1>
             <h1> {"Jeremy Chow"} </h1>
-
-            <p> I'm a Data Scientist interested in using machine learning models to impact business decisions.</p>
+            <SocialMediaLinks />
+            <p> I'm a Data Scientist passionate about using machine learning models to impact business
+             decisions and gather meaningful insights.</p>
             <p> I am comfortable in the following technologies: </p>
+            <div style={{display: "flex",textAlign: "left"}}>
 
+                <ul style = {{margin: "auto"}}> 
+                <h4> <strong>Languages</strong> </h4>
+                    <li> Python </li>
+                    <li> SQL </li>
+                    <li> JavaScript, HTML </li>
+                    <li> C++, C </li>
+                    <li> Java </li>
+                </ul>
+                <ul style = {{margin: "auto"}}> 
+                <h4> <strong>Frameworks </strong></h4>
+                    <li> Pandas </li>
+                    <li> TensorFlow </li>
+                    <li> Keras </li>
+                    <li> Flask </li>
+                </ul>
+                <ul style = {{margin: "auto"}}> 
+                <h4> <strong> Other </strong></h4>
+                    <li> Tableau</li>
+                    <li> AWS EC2, RDS </li>
+                    <li> REST APIs </li>
+                    <li> Jupyter Notebooks </li>
+                </ul>
+            </div>
         </div>
+
 
         <div className = "project-wrapper">
             <hr /> 
@@ -46,11 +73,14 @@ function App() {
             <ProjectContainer 
                 title="Chatroom Toxicity Classifier Chatbot"
 
-                description = {"Built a chatbot that predicted the probability that an online comment is toxic. Deployed model \
-                on website and through Twitch chatbot programmed in JavaScript to classify live chat in real time. Model used \
+                description = {"Built a chatbot that predicted the probability that an online comment \
+                is toxic. Deployed model \
+                on website and through Twitch chatbot programmed in JavaScript to classify live chat \
+                in real time. Model used \
                 TF-IDF vectorization and logistic regression to process and classify comments on a 0-1 scale for six \
                 different categories that were present in the labeled training set. Models and pipeline built using \
-                Scikit-learn library. Basic API for chatbot to interface with website built using Flask. Website is deployed \
+                Scikit-learn library. Basic API for chatbot to interface with website built using Flask. \
+                Website is deployed \
                 on Heroku and is available to try below."}
 
                 github="https://github.com/jeremyrchow/harassment-classifier"
@@ -87,6 +117,8 @@ function App() {
 
     <ContactForm />
 
+    <footer> Built by Jeremy Chow </footer>
+    
     </div>
     );
 }

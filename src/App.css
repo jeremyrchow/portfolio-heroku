@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
     .container{
-        max-width: 970px;
+        max-width: 570px;
     }
 }
 .App {
@@ -71,5 +71,9 @@ img {
 
 #contact-form {
   text-align: left
+}
+
+footer{
+  color: gray;
 }
 
