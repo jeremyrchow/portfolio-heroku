@@ -65,6 +65,9 @@ img {
 .intro-text h1{
   font-size: calc(2em + 3vw);
 }
+.intro-text p{
+  font-size: 1.2em;
+}
 
 #contact-form {
   text-align: left
