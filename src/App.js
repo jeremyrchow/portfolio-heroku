@@ -13,7 +13,7 @@ function App() {
         <HeaderBanner />
         <div className = "profile-pic">
             <img
-            style={{borderRadius: "50%", height: "35vw", transition: "opacity 0.5s", opacity: 1}} 
+            style={{borderRadius: "50%", height: "calc(10vw+5vw)", maxHeight: "500px"}} 
             src = {ProfilePic}
             alt = "JeremyChowPicture"
             />
@@ -25,8 +25,8 @@ function App() {
             <SocialMediaLinks />
             <p> I'm a Data Scientist passionate about using machine learning models to impact business
              decisions and gather meaningful insights.</p>
-            <p> I am comfortable in the following technologies: </p>
-            <div className = "row">
+            <p style={{paddingTop: '2em'}}> I am comfortable in the following technologies: </p>
+            <div className = "gridWrapper">
 
                 <ul className="listColumn"> 
                 <h4> <strong>Languages</strong> </h4>

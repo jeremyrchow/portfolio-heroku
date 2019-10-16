@@ -15,12 +15,6 @@ function ProjectContainer(props) {
     presentation = ""
     demo_link = ""
 
-
-                        <img
-                        width = {"50px"}
-                        src="https://img.icons8.com/ios-filled/128/000000/link.png"  
-                        alt = "Project Link"
-                    />
     */
   return (
     <div className="project">
