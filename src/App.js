@@ -13,7 +13,7 @@ function App() {
         <HeaderBanner />
         <div className = "profile-pic">
             <img
-            style={{borderRadius: "50%", height: "calc(10vw+5vw)", maxHeight: "500px"}} 
+            style={{borderRadius: "50%", paddingTop: "50px",height: "calc(10vw+5vw)", maxHeight: "500px"}} 
             src = {ProfilePic}
             alt = "JeremyChowPicture"
             />

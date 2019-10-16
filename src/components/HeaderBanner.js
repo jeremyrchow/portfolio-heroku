@@ -3,6 +3,7 @@ import "./HeaderBanner.css"
 import HeaderNavButtons from "./HeaderNavButtons"
 import {Nav,Navbar,NavDropdown,NavItem,Form,FormControl,Button} from 'react-bootstrap/'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Resume from '../assets/Jeremy_Chow_Resume.pdf'
 
 
 function HeaderBanner() {
@@ -14,7 +15,7 @@ function HeaderBanner() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {/*<Nav.Link href="#link">Projects</Nav.Link>*/}
-            <Nav.Link href="https://resume.creddle.io/resume/41vrfdai6um">Résumé</Nav.Link>
+            <Nav.Link href={Resume}>Résumé</Nav.Link>
             {/*
                         <NavDropdown title="Projects" id="basic-nav-dropdown">
                           <NavDropdown.Item href="#action/3.1">Machine Learning</NavDropdown.Item>
