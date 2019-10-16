@@ -13,14 +13,14 @@ function App() {
         <HeaderBanner />
         <div className = "profile-pic">
             <img
-            style={{borderRadius: "50%", paddingTop: "50px",height: "calc(10vw+5vw)", maxHeight: "500px"}} 
+            style={{borderRadius: "50%", paddingTop: "60px",height: "calc(10vw+5vw)", maxHeight: "500px"}} 
             src = {ProfilePic}
             alt = "JeremyChowPicture"
             />
         </div>
 
         <div className = "intro-text">
-            <h1> {"Hi, my name is "} </h1>
+            <h2> {"Hi, my name is "} </h2>
             <h1> {"Jeremy Chow"} </h1>
             <SocialMediaLinks />
             <p> I'm a Data Scientist passionate about using machine learning models to impact business
