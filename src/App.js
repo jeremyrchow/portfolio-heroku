@@ -5,7 +5,7 @@ import ProjectContainer from './components/ProjectContainer'
 import ProfilePic from './assets/Jeremy_Chow_White_Background.jpg'
 import ContactForm from './components/ContactForm'
 import SocialMediaLinks from './components/SocialMediaLinks'
-
+import SkillsGridList from './components/SkillsGridList'
 function App() {
 
     return (
@@ -26,31 +26,8 @@ function App() {
             <p> I'm a Data Scientist passionate about using machine learning models to impact business
              decisions and gather meaningful insights.</p>
             <p style={{paddingTop: '2em'}}> I am comfortable in the following technologies: </p>
-            <div className = "gridWrapper">
-
-                <ul className="listColumn"> 
-                <h4> <strong>Languages</strong> </h4>
-                    <li> Python </li>
-                    <li> SQL </li>
-                    <li> JavaScript, HTML </li>
-                    <li> C++, C </li>
-                    <li> Java </li>
-                </ul>
-                <ul className="listColumn"> 
-                <h4> <strong>Frameworks </strong></h4>
-                    <li> Pandas </li>
-                    <li> TensorFlow </li>
-                    <li> Keras </li>
-                    <li> Flask </li>
-                </ul>
-                <ul className="listColumn"> 
-                <h4> <strong> Other </strong></h4>
-                    <li> Tableau</li>
-                    <li> AWS EC2, RDS </li>
-                    <li> REST APIs </li>
-                    <li> Jupyter Notebooks </li>
-                </ul>
-            </div>
+            
+            <SkillsGridList />
         </div>
 
 
@@ -66,7 +43,7 @@ function App() {
                 Built complete data pipeline that automated Twitch API calls on an Amazon EC2 instance \
                 and stored data in SQL database on an Amazon RDS instance."}
 
-                github="https://github.com/"
+                github="https://github.com/jeremyrchow/Twitch_Streamers_Recommender"
             /> 
 
             <ProjectContainer 

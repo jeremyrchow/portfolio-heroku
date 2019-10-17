@@ -32,8 +32,6 @@
 .profile-pic {
   margin-top: 10%;
   margin-bottom: 3%;
-  /*margin-right: 10%;*/
-  /*margin-left: 10%;*/
 }
 
 .project{
@@ -47,7 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: linear-gradient(#000, #000) no-repeat center/2px 100%;*/
 }
 
 .link-logo{
@@ -62,7 +59,6 @@
 
 }
 
-
 .gridWrapper{
   display: grid;
   grid-column-gap: 0px;
@@ -70,7 +66,6 @@
   
   justify-items: center;
 }
-
 
 img {
   max-width: 100%;

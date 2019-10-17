@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import axios from 'axios'
+// import axios from 'axios'
 
 
 class ContactForm extends Component{
@@ -15,22 +15,25 @@ class ContactForm extends Component{
         const email = document.getElementById('email').value
         const message = document.getElementById('message').value
 
-        axios({
-            method: "POST",
-            url: "http://localhost:3002/send",
-            data: {
-                name: name,
-                email: email,
-                message: message
-            }
-        }).then((response) => {
-            if (response.data.msg === 'success'){
-                alert("Message Sent Successfully!")
-                this.resetForm()
-            }else if (response.data.msg === 'fail'){
-                alert("Message Failed to Send.")
-            }
-        })
+        const sgMail = require('@sendgrid/mail');
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        const msg = {
+          to: 'jeremyrchow@gmail.com',
+          from: 'jeremyrchow@gmail.com',
+          subject: 'Sending with Twilio SendGrid is Fun',
+          text: 'and easy to do anywhere, even with Node.js',
+          html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        };
+
+        console.log(msg)
+        sgMail.send(msg);
+        // const data = new FormData(e.target);
+
+        // fetch('/api/form-submit-url', {
+        //     method: 'POST',
+        //     body: data,
+        //     });
+
 
     }
 
@@ -41,23 +44,24 @@ class ContactForm extends Component{
     render(){
         return (
             <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
+                <p>Want to reach out? I'm currently open to new opportunities! Feel free to send a message and I'll
+                get back to you as soon as possible! </p>
                 <div className="form-group">
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" className="form-control" id="name" />
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                 </div>
                 <div className="form-group">
-                    <label for="message">Message</label>
+                    <label htmlFor="message">Message</label>
                     <textarea className="form-control" rows="5" id="message"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary" style={{float: "right"}}>Submit</button>
             </form>
         );
     }
-  
 }
 
 export default ContactForm;
